@@ -23,8 +23,7 @@ RUN			dpkg --add-architecture i386 \
 USER container
 ENV  USER=container HOME=/home/container
 
-RUN			curl -fsSL -o setup.sh https://raw.githubusercontent.com/makeplane/plane/master/deploy/selfhost/install.sh \
-			&& chmod +x setup.sh
+RUN			curl -sL  https://raw.githubusercontent.com/makeplane/plane/master/deploy/selfhost/install.sh | bash -
 
 WORKDIR /home/container
 
