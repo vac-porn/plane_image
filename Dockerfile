@@ -23,7 +23,7 @@ RUN			dpkg --add-architecture i386 \
 USER container
 ENV  USER=container HOME=/home/container
 
-RUN			git clone https://github.com/makeplane/plane.git
+CMD ["git clone https://github.com/makeplane/plane.git"]
 
 WORKDIR /home/container
 
