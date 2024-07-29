@@ -23,7 +23,7 @@ RUN			dpkg --add-architecture i386 \
 USER container
 ENV  USER=container HOME=/home/container
 
-RUN			curl -sL  https://raw.githubusercontent.com/makeplane/plane/master/deploy/selfhost/install.sh | bash -
+RUN			git clone https://github.com/makeplane/plane.git
 
 WORKDIR /home/container
 
