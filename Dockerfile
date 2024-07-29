@@ -9,8 +9,6 @@ FROM --platform=$TARGETOS/$TARGETARCH debian:bullseye-slim
 MAINTAINER Pterodactyl Software, <support@pterodactyl.io>
 ENV         DEBIAN_FRONTEND=noninteractive
 
-RUN apk add --no-cache --update curl ca-certificates openssl git tar bash sqlite fontconfig \
-    && adduser --disabled-password --home /home/container container
 
 RUN			dpkg --add-architecture i386 \
 			&& apt update \
