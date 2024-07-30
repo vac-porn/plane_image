@@ -16,7 +16,6 @@ RUN			dpkg --add-architecture i386 \
 			&& apt install -y lib32gcc-s1 lib32stdc++6 unzip curl iproute2 tzdata libgdiplus libsdl2-2.0-0:i386 \
 			&& apt install -y nodejs \
 			&& mkdir /node_modules \
-			&& npm install --prefix / ws \
 			&& useradd -d /home/container -m container
 
 USER container
